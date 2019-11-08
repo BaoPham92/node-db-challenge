@@ -4,7 +4,7 @@
   "description": "## Description",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "server": "nodemon ./server/index.js"
   },
   "repository": {
     "type": "git",
@@ -26,6 +26,7 @@
     "sqlite": "^3.0.3"
   },
   "devDependencies": {
+    "dotenv": "^8.2.0",
     "nodemon": "^1.19.4"
   }
 }
