@@ -14,13 +14,20 @@ exports.seed = function (knex) {
         },
         {
           id: 2,
-          description: 'Task belonging to project 2',
-          notes: '',
+          description: 'Last 99 to complete that wasn\'t completed for Licky Nells?',
+          notes: 'Agility',
           completed: false,
           task_id: 2
         },
         {
           id: 3,
+          description: 'Second 99 to get?',
+          notes: 'Slayer.',
+          completed: false,
+          task_id: 2
+        },
+        {
+          id: 4,
           description: 'Task belonging to porject 3',
           notes: '',
           completed: false,
