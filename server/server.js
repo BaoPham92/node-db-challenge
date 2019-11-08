@@ -26,7 +26,8 @@ server.post('/projects', (req, res) => {
 })
 
 server.get('/tasks', (req, res) => {
-    task.getAll()
+    console.log(req.params.id)
+    task.getAll(req.params.id && req.params.id)
         .then(taskList => res.status(200).json(taskList))
         .catch(err => res.status(500).json({ error: err }))
 }

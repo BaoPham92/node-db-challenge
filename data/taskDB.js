@@ -11,9 +11,19 @@ const add = (task) => {
         .then(id => getById(id[0]));;
 }
 
-const getAll = async () => {
+const getAll = async (id) => {
 
-    const tasks = await db('task').map(index => {
+    // select * FROM task JOIN project on project.id = task.task_id;
+
+    const tasksList = await db('task')
+    .join('project', 'project.id', 'task_id')
+    .select('task.*', 'project.name', 'project.description')
+    console.log(tasksList)
+
+    const tasks = await db('task')
+    .join('project', 'project.id', 'task_id')
+    .select('task.*', 'project.name', 'project.description')
+    .map(index => {
         // console.log(index)
         if (index.completed === 0 || index.completed === '0') {
             return {
