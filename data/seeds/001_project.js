@@ -13,8 +13,8 @@ exports.seed = function (knex) {
         },
         {
           id: 2,
-          name: 'Second project, the SEED project.',
-          description: 'They just been put into a logistics deal between the EU & China.',
+          name: 'Second project, a OLRS thing.',
+          description: 'Random break in life. Play some OSRS.',
           completed: false
         },
         {
